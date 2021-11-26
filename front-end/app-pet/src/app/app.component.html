@@ -1,4 +1,17 @@
-<h1 class="text-center">Sistema de Gerenciamento de Pets</h1>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="pets" routerLinkActive="active" class="nav-link">Lista de Pets</a>
+    </li>
+  </ul>
+</nav>
+
+<h1 class="text-center m-4">{{ titulo }}</h1>
 <div class="container">
-  <app-pet-list></app-pet-list>
+  <router-outlet></router-outlet>
 </div>
+<footer class="footer">
+  <div class="container p-2">
+    <span>Todos os direitos reservados. Por <a target="_blank" href="https://www.linkedin.com/in/victor-lobato-ab12851b3/">Victor Lobato</a></span>
+  </div>
+</footer>

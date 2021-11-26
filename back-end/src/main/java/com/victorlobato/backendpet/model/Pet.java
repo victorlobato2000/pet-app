@@ -15,6 +15,8 @@ public class Pet {
     @Column(name = "email_dono")
     private String emailDono;
 
+    public Pet(){}
+
     public Pet(String nome, String nomeDono, String emailDono) {
         this.nome = nome;
         this.nomeDono = nomeDono;
