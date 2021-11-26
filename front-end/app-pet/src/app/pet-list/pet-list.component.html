@@ -1,0 +1,17 @@
+<h2>Lista de Pets</h2>
+<table class="table table-striped">
+    <thead>
+        <th scope="col">Nome</th>
+        <th scope="col">Dono</th>
+        <th scope="col">E-mail</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pet of pets">
+            <td scope="row">{{ pet.nome }}</td>
+            <td scope="row">{{ pet.nomeDono }}</td>
+            <td scope="row">{{ pet.emailDono }}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
