@@ -34,4 +34,17 @@ public class PetController {
         return ResponseEntity.ok(pet);
     }
 
+    @PutMapping("/pets/{id}")
+    public ResponseEntity<Pet> updatePet(@PathVariable Long id, @RequestBody Pet petDetails){
+        Pet pet = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Pet não encontrado com o id = "+ id));
+
+        pet.setNome(petDetails.getNome());
+        pet.setNomeDono(petDetails.getNomeDono());
+        pet.setEmailDono(petDetails.getEmailDono());
+
+        Pet updatedPet = repository.save(pet);
+        return ResponseEntity.ok(updatedPet);
+    }
+
 }
